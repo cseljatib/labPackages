@@ -3,8 +3,7 @@
 En este repositorio se almacenan las versiones más recientes de los
 paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].
 Los paquetes a los cuales se hace mención se pueden ejecutar
-en el 
-[[https://cran.r-project.org][software R]].
+en el software [[https://cran.r-project.org][R]].
 
 En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]] y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *CRAN* del software R, en
 su actualización es algo más lenta de lo que vamos desarrollando por lo cual
