@@ -1,4 +1,4 @@
-* Almacen de las más recientes versiones de los paquetes de R del lab
+* Las más recientes actualizaciones de los paquetes de R del lab
 
 En este repositorio se almacenan las versiones más recientes de los
 paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].
