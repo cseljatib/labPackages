@@ -6,20 +6,17 @@ Los paquetes a los cuales se hace mención se pueden ejecutar
 en el 
 [[https://cran.r-project.org][software R]].
 
-En específico los paquetes son
-# =biometrics= y =datana=
- [[https://cran.r-project.org/package=datana][datana]]
-y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran
-disponibles en el repositorio *CRAN* del software R, en
+En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]] y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *CRAN* del software R, en
 su actualización es algo más lenta de lo que vamos desarrollando por lo cual
 es preferible Ud. siempre verifique las versiones de los paquetes instalados.
 
-Los archivos instaladores tiene formato tar.gz, y en la carpeta
+Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y
+además en la carpeta
 *manuales* se mantienen los documentos de uso del paquete en cuestón.
 
 Luego de instalado un paquete, 
- Ud. puede proceder como sigue para verificar estan correctamente
- instalados.
+ Ud. puede proceder como sigue para verificar si quedo correctamente
+ instalado.
  # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
 
   
