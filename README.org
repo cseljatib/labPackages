@@ -1,12 +1,18 @@
-* Sitio donde se almacenan las más recientes versiones de los paquetes de R del lab
+* Almacen de las más recientes versiones de los paquetes de R del lab
 
-En este repositorio se almacenan las versiones más recientes de los paquetes del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]],  de la [[https://uchile.cl][Universidad de Chile]].
+En este repositorio se almacenan las versiones más recientes de los paquetes del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].
 
 Si bien estos paquetes estan disponibles en el repositorio *CRAN* del software,
 su actualización es algo más lenta de lo que vamos desarrollando por lo cual
 es preferible Ud. siempre verifique las versiones de los paquetes instalados.
 
-Para lo anterior, Ud. puede proceder como sigue, para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
+Los archivos instaladores tiene formato tar.gz, y en la carpeta
+*manuals* se mantienen los documentos de uso del paquete en cuestón.
+
+Luego de instalado un paquete, 
+ Ud. puede proceder como sigue para verificar estan correctamente
+ instalados.
+ # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
 
   
 Llamarlos a la sesión:
