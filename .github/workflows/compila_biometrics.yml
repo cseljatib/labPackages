@@ -1,13 +1,12 @@
 name: compilar biometrics
 
-# on:
-  # repository_dispatch:
-    # types: [push_externo]
 on:
+  repository_dispatch:
+    types: [push_externo]
   workflow_dispatch:
 
 jobs:
-  update_readme:
+  compilando_paquete:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,20 +34,20 @@ jobs:
     - name: Instalando latex
       uses: r-lib/actions/setup-tinytex@v2
 
-    - name: genera paquete
+    - name: Corriendo 00maestroCreador.r
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        rm ../biometrics*.tar.gz
+        rm ../biometrics*
         cp biometrics*.tar.gz ../
         rm ../manuales/biometrics.pdf
         cp biometrics.pdf ../manuales/
         cd ../
 
-    - name: Update README with last commit message
+    - name: Push de nuevos cambios
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git add biometrics*.tar.gz manuales/biometrics.pdf
+        git add .
         git commit -m "new biometrics build"
         git push

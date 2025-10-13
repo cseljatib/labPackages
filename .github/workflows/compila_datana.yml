@@ -1,13 +1,12 @@
 name: compilar datana
 
-# on:
-  # repository_dispatch:
-    # types: [push_externo]
 on:
+  repository_dispatch:
+    types: [push_externo]
   workflow_dispatch:
 
 jobs:
-  update_readme:
+  compilando_paquete:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,20 +34,20 @@ jobs:
     - name: Instalando latex
       uses: r-lib/actions/setup-tinytex@v2
 
-    - name: genera paquete
+    - name: Corriendo 00maestroCreador.r
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        rm ../datana*.tar.gz
+        rm ../datana*
         cp datana*.tar.gz ../
         rm ../manuales/datana.pdf
         cp datana.pdf ../manuales/
         cd ../
 
-    - name: Update README with last commit message
+    - name: Push de nuevos cambios
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
-        git add datana*.tar.gz manuales/datana.pdf
+        git add .
         git commit -m "new datana build"
         git push
