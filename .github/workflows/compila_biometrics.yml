@@ -1,0 +1,54 @@
+name: compilar biometrics
+
+# on:
+  # repository_dispatch:
+    # types: [push_externo]
+on:
+  workflow_dispatch:
+
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cargando repositorio labPackages
+      uses: actions/checkout@v5.0.0
+
+    - name: Cargando repositorio library_biometrics
+      uses: actions/checkout@v5.0.0
+      with:
+        repository: cseljatib/library_biometrics
+        token: ${{ secrets.csetoken }}
+        ref: biometrics-cleanup
+        path: elotrorepo
+
+    - name: Instalando R
+      uses: r-lib/actions/setup-r@v2
+      with:
+        r-version: 'release'
+
+    - name: Instalando dependencias
+      uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+        extra-packages: any::devtools, any::datana
+
+    - name: Instalando latex
+      uses: r-lib/actions/setup-tinytex@v2
+
+    - name: genera paquete
+      run: |
+        cd elotrorepo
+        Rscript 00maestroCreador.r
+        rm ../biometrics*.tar.gz
+        cp biometrics*.tar.gz ../
+        rm ../manuales/biometrics.pdf
+        cp biometrics.pdf ../manuales/
+        cd ../
+
+    - name: Update README with last commit message
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add biometrics*.tar.gz manuales/biometrics.pdf
+        git commit -m "new biometrics build"
+        git push
