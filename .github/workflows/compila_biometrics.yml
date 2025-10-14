@@ -2,7 +2,7 @@ name: compilar biometrics
 
 on:
   repository_dispatch:
-    types: [push_externo]
+    types: [trigger_biometrics]
   workflow_dispatch:
 
 jobs:
@@ -29,7 +29,6 @@ jobs:
     - name: Instalando dependencias
       uses: r-lib/actions/setup-r-dependencies@v2
       with:
-        extra-packages: any::devtools, any::datana
 
     - name: Instalando latex
       uses: r-lib/actions/setup-tinytex@v2
