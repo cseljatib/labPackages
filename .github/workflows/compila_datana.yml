@@ -18,7 +18,7 @@ jobs:
       with:
         repository: cseljatib/library_datana
         token: ${{ secrets.csetoken }}
-        ref: biometrics-cleanup
+        ref: datana-cleanup
         path: elotrorepo
 
     - name: Instalando R
