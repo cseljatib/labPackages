@@ -28,7 +28,6 @@ jobs:
 
     - name: Instalando dependencias
       uses: r-lib/actions/setup-r-dependencies@v2
-      with:
 
     - name: Instalando latex
       uses: r-lib/actions/setup-tinytex@v2
