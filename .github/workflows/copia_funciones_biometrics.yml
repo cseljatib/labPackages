@@ -1,0 +1,34 @@
+name: copiar funciones_biometrics
+
+on:
+  repository_dispatch:
+    types: [trigger_funciones_biometrics]
+  workflow_dispatch:
+
+jobs:
+  compilando_paquete:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cargando repositorio labPackages
+      uses: actions/checkout@v5.0.0
+
+    - name: Cargando repositorio library_biometrics
+      uses: actions/checkout@v5.0.0
+      with:
+        repository: cseljatib/library_biometrics
+        token: ${{ secrets.csetoken }}
+        ref: biometrics-cleanup
+        path: elotrorepo
+
+    - name: copiando funciones_biometrics.pdf
+      run: |
+        cp elotrorepo/data-raw/01org/funciones_biometrics.pdf manuales/
+
+    - name: Push de nuevos cambios
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add .
+        git commit -m "new funciones_biometrics doc"
+        git push

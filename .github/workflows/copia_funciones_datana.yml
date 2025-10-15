@@ -1,0 +1,34 @@
+name: copiar funciones_datana
+
+on:
+  repository_dispatch:
+    types: [trigger_funciones_datana]
+  workflow_dispatch:
+
+jobs:
+  compilando_paquete:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Cargando repositorio labPackages
+      uses: actions/checkout@v5.0.0
+
+    - name: Cargando repositorio library_datana
+      uses: actions/checkout@v5.0.0
+      with:
+        repository: cseljatib/library_datana
+        token: ${{ secrets.csetoken }}
+        ref: datana-cleanup
+        path: elotrorepo
+
+    - name: copiando funciones_datana.pdf
+      run: |
+        cp elotrorepo/data-raw/01org/funciones_datana.pdf manuales/
+
+    - name: Push de nuevos cambios
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add .
+        git commit -m "new funciones_datana doc"
+        git push
