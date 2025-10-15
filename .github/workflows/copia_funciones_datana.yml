@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  compilando_paquete:
+  copiando documento:
     runs-on: ubuntu-latest
 
     steps:
