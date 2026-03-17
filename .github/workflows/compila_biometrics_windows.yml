@@ -1,0 +1,52 @@
+name: Compile Biometrics
+
+on:
+  repository_dispatch:
+    types: [trigger_biometrics]
+  workflow_dispatch:
+
+jobs:
+  compiling_package:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout labPackages repository
+      uses: actions/checkout@v5.0.0
+
+    - name: Checkout library_biometrics repository
+      uses: actions/checkout@v5.0.0
+      with:
+        repository: cseljatib/library_biometrics
+        token: ${{ secrets.csetoken }}
+        ref: biometrics-cleanup
+        path: elotrorepo
+
+    - name: Install R
+      run: |
+        choco install -y r.project
+
+    - name: Install R dependencies
+      run: |
+        Rscript -e "if (!requireNamespace('devtools', quietly = TRUE)) install.packages('devtools'); devtools::install_deps()"
+
+    - name: Install LaTeX
+      run: |
+        choco install -y miktex
+
+    - name: Run 00maestroCreador.r
+      run: |
+        cd elotrorepo
+        Rscript 00maestroCreador.r
+        Remove-Item ../biometrics*
+        Copy-Item biometrics*.tar.gz ../
+        Remove-Item ../manuales/biometrics.pdf
+        Copy-Item biometrics.pdf ../manuales/
+        cd ../
+
+    - name: Push new changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add .
+        git commit -m "new biometrics build"
+        git push
