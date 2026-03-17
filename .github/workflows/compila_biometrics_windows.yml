@@ -45,7 +45,7 @@ jobs:
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        Remove-Item ../biometrics*.zip
+        # Remove-Item ../biometrics*.zip
         Copy-Item biometrics* ../
         # Remove-Item ../manuales/biometrics.pdf
         # Copy-Item biometrics.pdf ../manuales/
