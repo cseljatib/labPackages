@@ -45,16 +45,16 @@ jobs:
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        # Remove-Item ../biometrics*.zip
-        Copy-Item biometrics* ../
+        Remove-Item ..\biometrics*.zip
+        Copy-Item biometrics*.zip ..\
         # Remove-Item ../manuales/biometrics.pdf
         # Copy-Item biometrics.pdf ../manuales/
-        cd ../
+        cd ..\
 
     - name: Push new changes
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "action@github.com"
         git add .
-        git commit -m "new biometrics build"
+        git commit -m "new windows biometrics build"
         git push
