@@ -5,3 +5,4 @@
 !/README.org
 !/*.tar.gz
 !/*.zip
+!/InstallLabPackages.R
