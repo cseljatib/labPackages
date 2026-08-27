@@ -57,6 +57,70 @@ pkgs <- list(
   biometrics = list(zip_url = biometrics_info$url, zip_name = biometrics_info$name)
 )
 
+# Reads the DESCRIPTION file out of a local .zip or .tar.gz package archive
+# without fully extracting it, and returns it as a one-row data.frame (via
+# read.dcf), or NULL if no DESCRIPTION file is found.
+extract_description <- function(archive_path) {
+  is_zip <- grepl("\\.zip$", archive_path, ignore.case = TRUE)
+  extract_dir <- file.path(tempdir(), paste0("desc_", basename(archive_path), "_extract"))
+  dir.create(extract_dir, showWarnings = FALSE, recursive = TRUE)
+
+  if (is_zip) {
+    entries <- unzip(archive_path, list = TRUE)$Name
+    desc_entry <- entries[grepl("(^|/)DESCRIPTION$", entries)][1]
+    if (is.na(desc_entry)) return(NULL)
+    unzip(archive_path, files = desc_entry, exdir = extract_dir)
+  } else {
+    entries <- untar(archive_path, list = TRUE)
+    desc_entry <- entries[grepl("(^|/)DESCRIPTION$", entries)][1]
+    if (is.na(desc_entry)) return(NULL)
+    untar(archive_path, files = desc_entry, exdir = extract_dir)
+  }
+
+  desc_path <- file.path(extract_dir, desc_entry)
+  if (!file.exists(desc_path)) return(NULL)
+  read.dcf(desc_path)
+}
+
+# Pulls package names out of the Depends/Imports/LinkingTo fields of a
+# DESCRIPTION, stripping version constraints and base/recommended packages
+# (which always ship with R and are never installed separately).
+get_dependencies <- function(desc) {
+  if (is.null(desc)) return(character(0))
+  base_pkgs <- c(
+    "R", "base", "stats", "methods", "utils", "graphics", "grDevices",
+    "datasets", "tools", "parallel", "compiler", "splines", "tcltk", "grid"
+  )
+  deps <- character(0)
+  for (field in c("Depends", "Imports", "LinkingTo")) {
+    if (field %in% colnames(desc)) {
+      val <- desc[1, field]
+      if (!is.na(val) && nzchar(val)) {
+        parts <- strsplit(val, ",")[[1]]
+        parts <- trimws(gsub("\\(.*\\)", "", parts))
+        deps <- c(deps, parts)
+      }
+    }
+  }
+  deps <- unique(deps[nzchar(deps)])
+  deps[!deps %in% base_pkgs]
+}
+
+# Installs any of `deps` that aren't already available.
+install_missing_dependencies <- function(deps) {
+  if (length(deps) == 0) {
+    message("  No extra dependencies to check.")
+    return(invisible())
+  }
+  missing <- deps[!vapply(deps, requireNamespace, logical(1), quietly = TRUE)]
+  if (length(missing) == 0) {
+    message("  All dependencies already installed.")
+  } else {
+    message("  Installing missing dependencies: ", paste(missing, collapse = ", "))
+    install.packages(missing)
+  }
+}
+
 for (pkg_name in names(pkgs)) {
   info <- pkgs[[pkg_name]]
 
@@ -70,6 +134,9 @@ for (pkg_name in names(pkgs)) {
   dest <- file.path(tempdir(), info$zip_name)
   message("Downloading ", info$zip_name, " ...")
   download.file(info$zip_url, destfile = dest, mode = "wb", quiet = TRUE)
+
+  message("Checking dependencies for ", info$zip_name, " ...")
+  install_missing_dependencies(get_dependencies(extract_description(dest)))
 
   message("Installing ", info$zip_name, " ...")
   install.packages(dest, repos = NULL, type = install_type)
