@@ -3,7 +3,7 @@
 *To install the latest versions of the packages, download and run the script [[./InstallLabPackages.R][InstallLabPackages.R]].*
 
 This repository stores the most recent versions of the
-computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.com][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
+computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.org][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
 The packages mentioned here can be run
 in the [[https://cran.r-project.org][R]] software.
 
@@ -17,29 +17,28 @@ additionally, the user documentation for the package in question is kept in the
 
 After installing a package, 
 you can proceed as follows to verify if it was installed
-correctly.
- # assuming you already have the =biometrics= and =datana= packages installed in your R version. 
-
+correctly. Let's assume you already have the =biometrics= and =datana= packages installed in your R version, and we want to review both packages. 
   
 Load them into the session:
-
   #+begin_src R
 library(datana)
-library(biometrics)
-  
+library(biometrics)  
   #+end_src
-y para verificar la versión del paquete, puede emplear la función =packageVersion()= como sigue
+
+To verify the package version, you can use the =packageVersion()= function as follows
 #+begin_src R
+packageVersion("datana")
 packageVersion("biometrics")
 #+end_src
 
-Cita del paquete
+To cite the packages, please use
 #+begin_src R
+citation("datana")
 citation("biometrics")
 #+end_src
 
-** Sugerencias/errores
-En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [[mailto:christian.salas@uchile.cl][este email]].
+** Sugesstions/errors
+If you: find any error, have suggestions, or questions, please drop me an email to [[mailto:christian.salas@uchile.cl][this email]].
 
 #+BEGIN_COMMENT
 no se leera
