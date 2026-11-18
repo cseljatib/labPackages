@@ -36,8 +36,9 @@ jobs:
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        rm ../biometrics*
-        cp biometrics*.tar.gz ../
+        rm -f ../biometrics*.tar.gz
+        cp biometrics*.tar.gz ../biometrics.tar.gz
+        Rscript ../.github/actualiza_tabla.R biometrics
         rm ../manuales/biometrics.pdf
         cp biometrics.pdf ../manuales/
         cd ../

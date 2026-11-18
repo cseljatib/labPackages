@@ -36,8 +36,9 @@ jobs:
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        rm ../datana*
-        cp datana*.tar.gz ../
+        rm -f ../datana*.tar.gz
+        cp datana*.tar.gz ../datana.tar.gz
+        Rscript ../.github/actualiza_tabla.R datana
         rm ../manuales/datana.pdf
         cp datana.pdf ../manuales/
         cd ../

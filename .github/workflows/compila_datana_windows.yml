@@ -38,9 +38,10 @@ jobs:
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        Remove-Item ..\datana*.zip
-        Copy-Item datana*.zip ..\
+        Remove-Item ..\datana*.zip -ErrorAction SilentlyContinue
+        Copy-Item datana*.zip ..\datana.zip
         cd ..\
+        Rscript .github/actualiza_tabla.R datana
 
     - name: Push new changes
       run: |

@@ -38,9 +38,10 @@ jobs:
       run: |
         cd elotrorepo
         Rscript 00maestroCreador.r
-        Remove-Item ..\biometrics*.zip
-        Copy-Item biometrics*.zip ..\
+        Remove-Item ..\biometrics*.zip -ErrorAction SilentlyContinue
+        Copy-Item biometrics*.zip ..\biometrics.zip
         cd ..\
+        Rscript .github/actualiza_tabla.R biometrics
 
     - name: Push new changes
       run: |
