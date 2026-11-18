@@ -1,3 +1,80 @@
+* The most recent updates to the laboratory's R packages
+
+This repository stores the most recent versions of the
+computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.com][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
+The packages mentioned here can be run in the [[https://cran.r-project.org][R]] software.
+
+Specifically, the packages are [[https://cran.r-project.org/package=datana][datana]] (Salas-Eljatib and Campos, 2026) and [[https://cran.r-project.org/package=biometrics][biometrics]]. Although these are available on the *[[https://www.r-project.org/][CRAN]]* repository of the R software, updates there are somewhat slower than our ongoing development, so it is preferable that you always verify the versions of the installed packages.
+
+
+* Installation
+To install a package, as explained in Salas-Eljatib (2021), you can use the =install.packages()= function. Below is an example with the =datana= package,
+  #+begin_src R
+  install.packages("datana")
+  #+end_src
+
+To load this package into the session:
+
+  #+begin_src R
+  library(datana)
+  #+end_src
+
+The package citation is obtained via
+#+begin_src R
+citation("biometrics")
+#+end_src
+
+Now, you can repeat the above for the =biometrics= package as follows
+  #+begin_src R
+  install.packages("datana")
+  library(biometrics)
+  citation("biometrics")
+#+end_src
+
+
+* Installation from a physical file
+The package installation explained above is performed from the source available on the official R server, called [[https://www.r-project.org/][CRAN]]; however,
+the latest updates are available on this website.
+
+How can you know if you are using an older version than the one developed by our laboratory? To check the package version, run the following in the R console
+#+begin_src R
+packageVersion("datana")
+#+end_src
+
+Note that the package version can only be checked once you have already installed the package.
+
+
+The installer files for =datana= and =biometrics= are in tar.gz format, and
+additionally, the user documentation for the package in question is kept in the *manuales* folder.
+
+After installing a package,
+you can proceed as follows to verify if it was installed
+correctly.
+ # assuming you already have the =biometrics= and =datana= packages installed in your R version.
+
+
+* Things to keep in mind
+Like any software, installing a specific R package may require other components on the computer itself, which depends on the operating system used as well as your computer's own configuration.
+In case you encounter any problems installing any of the above packages,
+the following is recommended:
+- check which extra packages the package to be installed requires. For example, in the case of =datana=, proceed as follows
+#+begin_src R
+setdiff(tools::package_dependencies("datana", recursive = TRUE)$datana, rownames(installed.packages()))
+#+end_src
+which will show exactly which packages =datana= will need in order to run. Similarly, for the =biometrics= package, you can proceed via
+
+#+begin_src R
+setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, rownames(installed.packages()))
+#+end_src
+
+** Suggestions/bugs
+If you find any bugs, have suggestions, or have questions, please write to [[mailto:christian.salas@uchile.cl][this email]].
+
+* References
+- Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadístico R: una Introducción Aplicada.
+Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
+
+#+begin_comment
 * Las más recientes actualizaciones de los paquetes de R del laboratorio
 
 En este repositorio se almacenan las versiones más recientes de los
@@ -73,3 +150,4 @@ En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [
 * Referencias
 - Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada.
 Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
+#+end_comment
