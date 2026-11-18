@@ -1,0 +1,73 @@
+* The most recent updates to the lab's R packages
+
+*To install the latest versions of the packages, download and run the script [[./InstallLabPackages.R][InstallLabPackages.R]].*
+
+This repository stores the most recent versions of the
+computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.org][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
+The packages mentioned here can be run
+in the [[https://cran.r-project.org][R]] software.
+
+Specifically, the packages are [[https://cran.r-project.org/package=datana][datana]] and [[https://cran.r-project.org/package=biometrics][biometrics]]. Although these are available on the R software *CRAN* repository,
+updates there are somewhat slower than our ongoing development, so
+it is preferable that you always verify the versions of the installed packages.
+
+The installer files for =datana= and =biometrics= are in tar.gz format, and
+additionally, the user documentation for the package in question is kept in the
+*manuales* folder.
+
+After installing a package, 
+you can proceed as follows to verify if it was installed
+correctly. Let's assume you already have the =biometrics= and =datana= packages installed in your R version, and we want to review both packages. 
+  
+Load them into the session:
+  #+begin_src R
+library(datana)
+library(biometrics)  
+  #+end_src
+
+To verify the package version, you can use the =packageVersion()= function as follows
+#+begin_src R
+packageVersion("datana")
+packageVersion("biometrics")
+#+end_src
+
+To cite the packages, please use
+#+begin_src R
+citation("datana")
+citation("biometrics")
+#+end_src
+
+** Sugesstions/errors
+If you: find any error, have suggestions, or questions, please drop me an email to [[mailto:christian.salas@uchile.cl][this account]].
+
+#+BEGIN_COMMENT
+no se leera
+
+
+* Las más recientes actualizaciones de los paquetes de R del lab
+
+*Para instalar las últimas versiones de los paquetes, descargue y corra el script [[./InstallLabPackages.R][InstallLabPackages.R]].*
+
+En este repositorio se almacenan las versiones más recientes de los
+paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].
+Los paquetes a los cuales se hace mención se pueden ejecutar
+en el software [[https://cran.r-project.org][R]].
+
+En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]] y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *CRAN* del software R, en
+su actualización es algo más lenta de lo que vamos desarrollando por lo cual
+es preferible Ud. siempre verifique las versiones de los paquetes instalados.
+
+Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y
+además en la carpeta
+*manuales* se mantienen los documentos de uso del paquete en cuestón.
+
+Luego de instalado un paquete, 
+ Ud. puede proceder como sigue para verificar si quedo correctamente
+ instalado.
+ # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
+
+
+  
+Llamarlos a la sesión:
+#+END_COMMENT
+
