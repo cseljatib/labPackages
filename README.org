@@ -22,3 +22,145 @@ The =.tar.gz= installer is the source package (any operating system); the
 user documentation of the package. The date column is updated
 automatically at each build (UTC time, with the hour and the minutes).
 
+# ============================================================================
+# The previous text of this file is kept below, hidden from the web page.
+# Every line is an org comment ('#' followed by a space). Never leave a bare
+# '#' line: the web page renderer hides comment text but shows a lone '#'.
+# ============================================================================
+# ============================================================================
+# The previous text of this file is kept below, commented out, so the web page
+# shows only the download links above.
+# ============================================================================
+# * Installation
+# To install a package, as explained in Salas-Eljatib (2021), you can use the =install.packages()= function. Below is an example with the =datana= package,
+#   #+begin_src R
+#   install.packages("datana")
+#   #+end_src
+# .
+# To load this package into the session:
+# .
+#   #+begin_src R
+#   library(datana)
+#   #+end_src
+# .
+# The package citation is obtained via
+# #+begin_src R
+# citation("biometrics")
+# #+end_src
+# .
+# Now, you can repeat the above for the =biometrics= package as follows
+#   #+begin_src R
+#   install.packages("datana")
+#   library(biometrics)
+#   citation("biometrics")
+# #+end_src
+# .
+# .
+# * Installation from a physical file
+# The package installation explained above is performed from the source available on the official R server, called [[https://www.r-project.org/][CRAN]]; however,
+# the latest updates are available on this website.
+# .
+# How can you know if you are using an older version than the one developed by our laboratory? To check the package version, run the following in the R console
+# #+begin_src R
+# packageVersion("datana")
+# #+end_src
+# .
+# Note that the package version can only be checked once you have already installed the package.
+# .
+# .
+# The installer files for =datana= and =biometrics= are in tar.gz format, and
+# additionally, the user documentation for the package in question is kept in the *manuales* folder.
+# .
+# After installing a package,
+# you can proceed as follows to verify if it was installed
+# correctly.
+#  # assuming you already have the =biometrics= and =datana= packages installed in your R version.
+# .
+# .
+# * Things to keep in mind
+# Like any software, installing a specific R package may require other components on the computer itself, which depends on the operating system used as well as your computer's own configuration.
+# In case you encounter any problems installing any of the above packages,
+# the following is recommended:
+# - check which extra packages the package to be installed requires. For example, in the case of =datana=, proceed as follows
+# #+begin_src R
+# setdiff(tools::package_dependencies("datana", recursive = TRUE)$datana, rownames(installed.packages()))
+# #+end_src
+# which will show exactly which packages =datana= will need in order to run. Similarly, for the =biometrics= package, you can proceed via
+# .
+# #+begin_src R
+# setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, rownames(installed.packages()))
+# #+end_src
+# .
+# ** Suggestions/bugs
+# If you find any bugs, have suggestions, or have questions, please write to [[mailto:christian.salas@uchile.cl][this email]].
+# .
+# * References
+# - Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadístico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
+# .
+# .
+# .
+# * Las más recientes actualizaciones de los paquetes de R del laboratorio
+# En este repositorio se almacenan las versiones más recientes de los paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].Los paquetes a los cuales se hace mención se pueden ejecutar en el software [[https://cran.r-project.org][R]].
+# .
+# En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]]  (Salas-Eljatib y Campos, 2026) y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *[[https://www.r-project.org/][CRAN]]*  del software R, en su actualización es algo más lenta de lo que vamos desarrollando por lo cual es preferible Ud. siempre verifique las versiones de los paquetes instalados.
+# .
+# * Instalación
+# Para instalar un paquete, y tal como es explicado en Salas-Eljatib (2021), se logra mediante el uso de la función =install.packages()=. A continuación se ejemplifica con el paquete =datana=,
+#   #+begin_src R
+#   install.packages("datana")
+#   #+end_src
+# .
+# .
+# .
+# Para llamar este paquete a la sesión:
+#   #+begin_src R
+#   library(datana)
+#   #+end_src
+# La cita del paquete se obtiene mediante
+# #+begin_src R
+# citation("biometrics")
+# #+end_src
+# Ahora, se puede repetir lo anterior, para el paquete =biometrics= como sigue
+#   #+begin_src R
+#   install.packages("datana")
+#   library(biometrics)
+#   citation("biometrics")
+#   #+end_src
+# .
+# .
+# * Instalación desde un archivo físico
+# .
+# La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo, las últimas actualizaciones estan disponibles en el presente sitio web.
+# .
+# ¿Cómo puede usted saber si esta ocupando una versión menos actualizada que la desarrollada por nuestro laboratorio? Para verificar la versión del paquete ejecute lo siguiente en la consola de R
+# #+begin_src R
+# packageVersion("datana")
+# #+end_src
+# Note que la versión del paquete tan solo se puede verificar siempre y cuando antes Ud. ha instalado dicho paquete.
+# .
+# Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y además en la carpeta *manuales* se mantienen los documentos de uso del paquete en cuestón.
+# .
+# Luego de instalado un paquete, Ud. puede proceder como sigue para verificar si quedo correctamente
+#  instalado.
+#  # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
+# .
+# .
+# * Para tener en consideración 
+# Como todo software, es posible que la instalación de un paquete en específico de R, va a requerir de otros componentes del computador en si mismo, lo cual depende del sistema operativo empleado, así como también de la configuración propia de nuestro computador.
+#  En el caso de tener algun problema con la instalación con alguno de los paquetes anteriores,
+# se recomienda lo siguiente:
+# - revisar cuales paquetes extras necesita el paquete a instalar. Por ejemplo, para el caso de =datana=, se procede como sigue
+# #+begin_src R
+# setdiff(tools::package_dependencies("datana", recursive = TRUE)$datana, rownames(installed.packages()))
+# #+end_src
+# lo cual mostrará exactamente que paquetes necesitará =datana= para poder ser ejecutado. Entonces, para el caso del paquete =biometrics= puede proceder mediante
+# .
+# #+begin_src R
+# setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, rownames(installed.packages()))
+# #+end_src
+# .
+# ** Sugerencias/errores
+# En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [[mailto:christian.salas@uchile.cl][este email]].
+# .
+# * Referencias
+# - Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
