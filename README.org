@@ -38,7 +38,7 @@ citation("biometrics")
 #+end_src
 
 ** Sugesstions/errors
-If you: find any error, have suggestions, or questions, please drop me an email to [[mailto:christian.salas@uchile.cl][this email]].
+If you: find any error, have suggestions, or questions, please drop me an email to [[mailto:christian.salas@uchile.cl][this account]].
 
 #+BEGIN_COMMENT
 no se leera
