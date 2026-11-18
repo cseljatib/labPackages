@@ -78,8 +78,7 @@ If you find any bugs, have suggestions, or have questions, please write to [[mai
 En este repositorio se almacenan las versiones más recientes de los paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].Los paquetes a los cuales se hace mención se pueden ejecutar en el software [[https://cran.r-project.org][R]].
 
 En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]]  (Salas-Eljatib y Campos, 2026) y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *[[https://www.r-project.org/][CRAN]]*  del software R, en su actualización es algo más lenta de lo que vamos desarrollando por lo cual es preferible Ud. siempre verifique las versiones de los paquetes instalados.
-
-
+ 
 * Instalación
 Para instalar un paquete, y tal como es explicado en Salas-Eljatib (2021), se logra mediante el uso de la función =install.packages()=. A continuación se ejemplifica con el paquete =datana=,
   #+begin_src R
@@ -99,24 +98,21 @@ Ahora, se puede repetir lo anterior, para el paquete =biometrics= como sigue
   library(biometrics)
   citation("biometrics")
   #+end_src
+ #+end_comment
 
 * Instalación desde un archivo físico
-La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo,
-las últimas actualizaciones estan disponibles en el presente sitio web.
+
+La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo, las últimas actualizaciones estan disponibles en el presente sitio web.
 
 ¿Cómo puede usted saber si esta ocupando una versión menos actualizada que la desarrollada por nuestro laboratorio? Para verificar la versión del paquete ejecute lo siguiente en la consola de R
 #+begin_src R
 packageVersion("datana")
 #+end_src
-
 Note que la versión del paquete tan solo se puede verificar siempre y cuando antes Ud. ha instalado dicho paquete.
 
+Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y además en la carpeta *manuales* se mantienen los documentos de uso del paquete en cuestón.
 
-Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y
-además en la carpeta *manuales* se mantienen los documentos de uso del paquete en cuestón.
-
-Luego de instalado un paquete, 
- Ud. puede proceder como sigue para verificar si quedo correctamente
+Luego de instalado un paquete, Ud. puede proceder como sigue para verificar si quedo correctamente
  instalado.
  # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
 
@@ -140,4 +136,4 @@ En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [
 
 * Referencias
 - Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
-#+end_comment
+ 
