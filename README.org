@@ -71,8 +71,7 @@ setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, 
 If you find any bugs, have suggestions, or have questions, please write to [[mailto:christian.salas@uchile.cl][this email]].
 
 * References
-- Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadístico R: una Introducción Aplicada.
-Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
+- Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadístico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
 
 #+begin_comment
 * Las más recientes actualizaciones de los paquetes de R del laboratorio
@@ -89,25 +88,20 @@ Para instalar un paquete, y tal como es explicado en Salas-Eljatib (2021), se lo
   #+begin_src R
   install.packages("datana")
   #+end_src
-
 Para llamar este paquete a la sesión:
-
   #+begin_src R
   library(datana)
   #+end_src
-
 La cita del paquete se obtiene mediante
 #+begin_src R
 citation("biometrics")
 #+end_src
-
 Ahora, se puede repetir lo anterior, para el paquete =biometrics= como sigue
   #+begin_src R
   install.packages("datana")
   library(biometrics)
   citation("biometrics")
 #+end_src
-
 
 * Instalación desde un archivo físico
 La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo,
