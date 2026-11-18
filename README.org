@@ -1,4 +1,4 @@
-* The most recent updates to the laboratory's R packages
+* Laboratory's R packages
 
 This repository stores the most recent versions of the computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.com][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
 The packages mentioned here can be run in the [[https://cran.r-project.org][R]] software.
