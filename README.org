@@ -101,7 +101,7 @@ Ahora, se puede repetir lo anterior, para el paquete =biometrics= como sigue
   install.packages("datana")
   library(biometrics)
   citation("biometrics")
-#+end_src
+  #+end_src
 
 * Instalación desde un archivo físico
 La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo,
