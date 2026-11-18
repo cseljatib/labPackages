@@ -41,7 +41,7 @@ citation("biometrics")
 ** Sugerencias/errores
 En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [[mailto:christian.salas@uchile.cl][este email]].
 
-<!--
+<!---
 no se leera
 
 
@@ -72,4 +72,4 @@ Luego de instalado un paquete,
 Llamarlos a la sesión:
 
 
--->
+--->
