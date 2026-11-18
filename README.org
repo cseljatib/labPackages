@@ -73,67 +73,71 @@ If you find any bugs, have suggestions, or have questions, please write to [[mai
 * References
 - Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadístico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
 
-#+begin_comment
-* Las más recientes actualizaciones de los paquetes de R del laboratorio
-En este repositorio se almacenan las versiones más recientes de los paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].Los paquetes a los cuales se hace mención se pueden ejecutar en el software [[https://cran.r-project.org][R]].
 
-En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]]  (Salas-Eljatib y Campos, 2026) y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *[[https://www.r-project.org/][CRAN]]*  del software R, en su actualización es algo más lenta de lo que vamos desarrollando por lo cual es preferible Ud. siempre verifique las versiones de los paquetes instalados.
+
+# * Las más recientes actualizaciones de los paquetes de R del laboratorio
+# En este repositorio se almacenan las versiones más recientes de los paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].Los paquetes a los cuales se hace mención se pueden ejecutar en el software [[https://cran.r-project.org][R]].
+
+# En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]]  (Salas-Eljatib y Campos, 2026) y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *[[https://www.r-project.org/][CRAN]]*  del software R, en su actualización es algo más lenta de lo que vamos desarrollando por lo cual es preferible Ud. siempre verifique las versiones de los paquetes instalados.
  
-* Instalación
-Para instalar un paquete, y tal como es explicado en Salas-Eljatib (2021), se logra mediante el uso de la función =install.packages()=. A continuación se ejemplifica con el paquete =datana=,
-  #+begin_src R
-  install.packages("datana")
-  #+end_src
-Para llamar este paquete a la sesión:
-  #+begin_src R
-  library(datana)
-  #+end_src
-La cita del paquete se obtiene mediante
-#+begin_src R
-citation("biometrics")
-#+end_src
-Ahora, se puede repetir lo anterior, para el paquete =biometrics= como sigue
-  #+begin_src R
-  install.packages("datana")
-  library(biometrics)
-  citation("biometrics")
-  #+end_src
- #+end_comment
-
-* Instalación desde un archivo físico
-
-La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo, las últimas actualizaciones estan disponibles en el presente sitio web.
-
-¿Cómo puede usted saber si esta ocupando una versión menos actualizada que la desarrollada por nuestro laboratorio? Para verificar la versión del paquete ejecute lo siguiente en la consola de R
-#+begin_src R
-packageVersion("datana")
-#+end_src
-Note que la versión del paquete tan solo se puede verificar siempre y cuando antes Ud. ha instalado dicho paquete.
-
-Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y además en la carpeta *manuales* se mantienen los documentos de uso del paquete en cuestón.
-
-Luego de instalado un paquete, Ud. puede proceder como sigue para verificar si quedo correctamente
- instalado.
- # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
+# * Instalación
+# Para instalar un paquete, y tal como es explicado en Salas-Eljatib (2021), se logra mediante el uso de la función =install.packages()=. A continuación se ejemplifica con el paquete =datana=,
+#   #+begin_src R
+#   install.packages("datana")
+#   #+end_src
 
 
-* Para tener en consideración 
-Como todo software, es posible que la instalación de un paquete en específico de R, va a requerir de otros componentes del computador en si mismo, lo cual depende del sistema operativo empleado, así como también de la configuración propia de nuestro computador.
- En el caso de tener algun problema con la instalación con alguno de los paquetes anteriores,
-se recomienda lo siguiente:
-- revisar cuales paquetes extras necesita el paquete a instalar. Por ejemplo, para el caso de =datana=, se procede como sigue
-#+begin_src R
-setdiff(tools::package_dependencies("datana", recursive = TRUE)$datana, rownames(installed.packages()))
-#+end_src
-lo cual mostrará exactamente que paquetes necesitará =datana= para poder ser ejecutado. Entonces, para el caso del paquete =biometrics= puede proceder mediante
 
-#+begin_src R
-setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, rownames(installed.packages()))
-#+end_src
+# Para llamar este paquete a la sesión:
+#   #+begin_src R
+#   library(datana)
+#   #+end_src
+# La cita del paquete se obtiene mediante
+# #+begin_src R
+# citation("biometrics")
+# #+end_src
+# Ahora, se puede repetir lo anterior, para el paquete =biometrics= como sigue
+#   #+begin_src R
+#   install.packages("datana")
+#   library(biometrics)
+#   citation("biometrics")
+#   #+end_src
 
-** Sugerencias/errores
-En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [[mailto:christian.salas@uchile.cl][este email]].
 
-* Referencias
-- Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
+# * Instalación desde un archivo físico
+
+# La instalación de paquetes explicada anteriormente se realiza a partir de la fuente disponible en el  servidor oficial de R, denominado [[https://www.r-project.org/][CRAN]], sin embargo, las últimas actualizaciones estan disponibles en el presente sitio web.
+
+# ¿Cómo puede usted saber si esta ocupando una versión menos actualizada que la desarrollada por nuestro laboratorio? Para verificar la versión del paquete ejecute lo siguiente en la consola de R
+# #+begin_src R
+# packageVersion("datana")
+# #+end_src
+# Note que la versión del paquete tan solo se puede verificar siempre y cuando antes Ud. ha instalado dicho paquete.
+
+# Los archivos instaladores de =datana= y =biometrics= tienen formato tar.gz, y además en la carpeta *manuales* se mantienen los documentos de uso del paquete en cuestón.
+
+# Luego de instalado un paquete, Ud. puede proceder como sigue para verificar si quedo correctamente
+#  instalado.
+#  # para lo cual se asume que ya tiene instalados los paquetes =biometrics= y =datana= en su versión de R. 
+
+
+# * Para tener en consideración 
+# Como todo software, es posible que la instalación de un paquete en específico de R, va a requerir de otros componentes del computador en si mismo, lo cual depende del sistema operativo empleado, así como también de la configuración propia de nuestro computador.
+#  En el caso de tener algun problema con la instalación con alguno de los paquetes anteriores,
+# se recomienda lo siguiente:
+# - revisar cuales paquetes extras necesita el paquete a instalar. Por ejemplo, para el caso de =datana=, se procede como sigue
+# #+begin_src R
+# setdiff(tools::package_dependencies("datana", recursive = TRUE)$datana, rownames(installed.packages()))
+# #+end_src
+# lo cual mostrará exactamente que paquetes necesitará =datana= para poder ser ejecutado. Entonces, para el caso del paquete =biometrics= puede proceder mediante
+
+# #+begin_src R
+# setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, rownames(installed.packages()))
+# #+end_src
+
+# ** Sugerencias/errores
+# En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [[mailto:christian.salas@uchile.cl][este email]].
+
+# * Referencias
+# - Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
  
