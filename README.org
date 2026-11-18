@@ -75,10 +75,7 @@ If you find any bugs, have suggestions, or have questions, please write to [[mai
 
 #+begin_comment
 * Las más recientes actualizaciones de los paquetes de R del laboratorio
-
-En este repositorio se almacenan las versiones más recientes de los
-paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].
-Los paquetes a los cuales se hace mención se pueden ejecutar en el software [[https://cran.r-project.org][R]].
+En este repositorio se almacenan las versiones más recientes de los paquetes computacionales del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], a cargo  del Profesor [[https://eljatib.com][Christian Salas-Eljatib]]  de la [[https://uchile.cl][Universidad de Chile]].Los paquetes a los cuales se hace mención se pueden ejecutar en el software [[https://cran.r-project.org][R]].
 
 En específico los paquetes son  [[https://cran.r-project.org/package=datana][datana]]  (Salas-Eljatib y Campos, 2026) y  [[https://cran.r-project.org/package=biometrics][biometrics]]. Aunque estos se encuentran disponibles en el repositorio *[[https://www.r-project.org/][CRAN]]*  del software R, en su actualización es algo más lenta de lo que vamos desarrollando por lo cual es preferible Ud. siempre verifique las versiones de los paquetes instalados.
 
@@ -142,6 +139,5 @@ setdiff(tools::package_dependencies("biometrics", recursive = TRUE)$biometrics, 
 En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a [[mailto:christian.salas@uchile.cl][este email]].
 
 * Referencias
-- Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada.
-Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
+- Salas-Eljatib C. 2021. Análisis de Datos con el Programa Estadı́stico R: una Introducción Aplicada. Santiago, Chile. Ediciones Universidad Mayor (ISBN:97895660860109). 170 p
 #+end_comment
