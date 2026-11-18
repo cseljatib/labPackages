@@ -4,7 +4,12 @@ This repository stores the most recent versions of the
 computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.com][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
 The packages mentioned here can be run in the [[https://cran.r-project.org][R]] software.
 
-Specifically, the packages are [[https://cran.r-project.org/package=datana][datana]] (Salas-Eljatib and Campos, 2026) and [[https://cran.r-project.org/package=biometrics][biometrics]]. Although these are available on the *[[https://www.r-project.org/][CRAN]]* repository of the R software, updates there are somewhat slower than our ongoing development, so it is preferable that you always verify the versions of the installed packages.
+Specifically, the packages are:
+
+1. [[https://cran.r-project.org/package=datana][datana]] (Salas-Eljatib and Campos, 2026)
+2. [[https://cran.r-project.org/package=biometrics][biometrics]] (Salas-Eljatib /et al/ 2026)
+
+Although these are available on the *[[https://www.r-project.org/][CRAN]]* repository of the R software, updates there are somewhat slower than our ongoing development, so it is preferable that you always verify the versions of the installed packages.
 
 
 * Installation
