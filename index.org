@@ -27,6 +27,8 @@ user documentation of the package and the date column is updated
 automatically at each build (UTC time, with the hour and the minutes).
 
 
+See Section [[#instaphy]] for details
+
 * Installation from the *CRAN* repository
 To install a package, as explained in Salas-Eljatib (2021), you can use the =install.packages()= function. Below is an example with the =datana= package,
   #+begin_src R
@@ -51,7 +53,12 @@ Now, you can repeat the above for the =biometrics= package as follows
   citation("biometrics")
 #+end_src
 
+
 * Installation from a physical file
+:PROPERTIES:
+:CUSTOM_ID: instaphy
+:END:
+
 The package installation explained above is performed from the source available on the official R server, called [[https://www.r-project.org/][CRAN]]; however,
 the latest updates are available on this website.
 How can you know if you are using an older version than the one developed by our laboratory? To check the package version, run the following in the R console
