@@ -27,9 +27,14 @@ user documentation of the package and the date column is updated
 automatically at each build (UTC time, with the hour and the minutes).
 
 
-See Section [[#instaphy]] for details
+Please jump to section [[#instaphy]] for instructions on how to install an R package from
+a source file. If your instructor has not specified that you must use the source files, then, the installation of any package is much easier from the repository, as explained in section [[#instarep]].
 
 * Installation from the *CRAN* repository
+:PROPERTIES:
+:CUSTOM_ID: instarep
+:END:
+
 To install a package, as explained in Salas-Eljatib (2021), you can use the =install.packages()= function. Below is an example with the =datana= package,
   #+begin_src R
   install.packages("datana")
