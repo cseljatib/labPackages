@@ -14,6 +14,44 @@ Specifically, the packages are:
 
 Although these are available on the *[[https://www.r-project.org/][CRAN]]* repository of the R software, updates there are somewhat slower than our ongoing development, so it is preferable that you always verify the versions of the installed packages.
 
+Click on a file name to download it.
+
+| Package    | version | .tar.gz        | .zip   | manual | date               |
+|------------+---------+----------------+--------+--------+--------------------|
+| datana     | 1.1.6 | [[https://github.com/cseljatib/labPackages/raw/main/datana.tar.gz][datana.tar.gz]] | [[https://github.com/cseljatib/labPackages/raw/main/datana.zip][datana.zip]] | [[https://github.com/cseljatib/labPackages/raw/main/manuales/datana.pdf][datana.pdf]] | 2026-11-19 04:39 UTC |
+| biometrics | 1.0.5 | [[https://github.com/cseljatib/labPackages/raw/main/biometrics.tar.gz][biometrics.tar.gz]] | [[https://github.com/cseljatib/labPackages/raw/main/biometrics.zip][biometrics.zip]] | [[https://github.com/cseljatib/labPackages/raw/main/manuales/biometrics.pdf][biometrics.pdf]] | 2026-11-19 07:22 UTC |
+
+The =.tar.gz= installer is the source package (any operating system); the
+=.zip= installer is the binary package for Windows; the =manual= is the
+user documentation of the package. The date column is updated
+automatically at each build (UTC time, with the hour and the minutes).
+
+
+* Installation
+To install a package, as explained in Salas-Eljatib (2021), you can use the =install.packages()= function. Below is an example with the =datana= package,
+  #+begin_src R
+  install.packages("datana")
+  #+end_src
+.
+To load this package into the session:
+.
+  #+begin_src R
+  library(datana)
+  #+end_src
+.
+The package citation is obtained via
+#+begin_src R
+citation("biometrics")
+#+end_src
+.
+Now, you can repeat the above for the =biometrics= package as follows
+  #+begin_src R
+  install.packages("datana")
+  library(biometrics)
+  citation("biometrics")
+#+end_src
+
+
 # Nico, es posible agregarle algun logo? quizas dame algunas alternativas de color o templates que podamos ir probando, pero manteniendo lo simple
 
 # Re: Se puede editar todo con HTML, en la proxima linea cambiare el color de la tabla de contenidos
