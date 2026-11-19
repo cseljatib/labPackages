@@ -63,11 +63,12 @@ Note that the package version can only be checked once you have already installe
 
 
 The installer files for =datana= and =biometrics= are in tar.gz format, and
-additionally, the user documentation for the package in question is kept in the *manuales* folder.
+additionally, the user documentation for the package in question is kept in the *manual* column of the above table.
 
-After installing a package,
-you can proceed as follows to verify if it was installed
-correctly.
+After installing the packages from the source files,
+you can proceed as above if they were installed
+correctly. The installation from a phisical file can be done in any GUI for R. For instance in the GUI  [[https://posit.co/downloads][RStudio]], you can go to the menu "Tools" and then "Install Packages", and a windows will pop up. On that, you must select the file package using the "Browse" button, but remember that you need to select "Package Archive File (.tar.gs)" in the option "Install from". After this you hit the bottom "Install", and you wait until de installation finishes.
+
  # assuming you already have the =biometrics= and =datana= packages installed in your R version.
 
 
