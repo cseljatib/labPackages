@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+<!-- 2026-11-18 mié 22:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Las más recientes actualizaciones de los paquetes de R del lab</title>
+<meta name="author" content="Christian Salas-Eljatib" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/code-copy.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/vendor/stickytableheaders/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg/js/code-copy.js"></script>
+<style>#table-of-contents{background: #23252F;}</style>
+<style>#table-of-contents h2{background: #282A36;}</style>
+<style>#table-of-contents a{color: #BBDEFB;}</style>
+<style>#postamble{background: #23252F;}</style>
+<style>#postamble{border-top: solid 10px #282A36;}</style>
+<style>#content{color: #404040;}</style>
+<style>#content{background: #fff;}</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Las más recientes actualizaciones de los paquetes de R del lab</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>&Iacute;ndice</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7138128">1. Enlaces de descarga</a>
+<ul>
+<li><a href="#org32fbf8e">1.1. datana</a></li>
+<li><a href="#org6ffca37">1.2. biometrics</a></li>
+<li><a href="#org8ee9d33">1.3. Script de instalación y actualización automática</a></li>
+</ul>
+</li>
+<li><a href="#org0779094">2. Sugerencias/errores</a></li>
+</ul>
+</div>
+</div>
+<p>
+En este repositorio se almacena el material computacional que complementa al libro <b>Estadística Aplicada e Inferencial</b> del Profesor <a href="https://eljatib.com">Christian Salas-Eljatib</a> del <a href="https://biometriaforestal.uchile.cl">Laboratorio de Biometría y Modelación Forestal</a> y del <a href="https://www.postgradofen.uchile.cl/mag%C3%ADster-en-pol%C3%ADticas-p%C3%BAblicas-escuela-de-postgrado-facultad-de-econom%C3%ADa-y-negocios-universidad-de-chile">Magíster en Políticas Públicas</a> de la <a href="https://uchile.cl">Universidad de Chile</a>.
+</p>
+
+<p>
+En este repositorio se almacenan las versiones más recientes de los
+paquetes computacionales del <a href="https://biometriaforestal.uchile.cl">Laboratorio de Biometría y Modelación Forestal</a>, a cargo  del Profesor <a href="https://eljatib.com">Christian Salas-Eljatib</a>  de la <a href="https://uchile.cl">Universidad de Chile</a>.
+Los paquetes a los cuales se hace mención se pueden ejecutar
+en el software <a href="https://cran.r-project.org">R</a>.
+</p>
+
+<p>
+En específico los paquetes son  <a href="https://cran.r-project.org/package=datana">datana</a> y  <a href="https://cran.r-project.org/package=biometrics">biometrics</a>. Aunque estos se encuentran disponibles en el repositorio <b>CRAN</b> del software R, en
+su actualización es algo más lenta de lo que vamos desarrollando por lo cual
+es preferible Ud. siempre verifique las versiones de los paquetes instalados.
+</p>
+
+<p>
+Los archivos instaladores de <code>datana</code> y <code>biometrics</code> tienen formato tar.gz, y
+además en la carpeta
+<b>manuales</b> se mantienen los documentos de uso del paquete en cuestón.
+</p>
+
+<p>
+Luego de instalado un paquete, 
+ Ud. puede proceder como sigue para verificar si quedo correctamente
+ instalado.
+</p>
+
+
+<p>
+Llamarlos a la sesión:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R"><span style="color: #00bcff;">library</span>(biometrics)
+<span style="color: #00bcff;">library</span>(datana)
+</pre>
+</div>
+<p>
+y para verificar la versión del paquete, puede emplear la función <code>packageVersion()</code> como sigue
+</p>
+<div class="org-src-container">
+<pre class="src src-R">packageVersion(<span style="color: #79a8ff;">"biometrics"</span>)
+</pre>
+</div>
+
+<p>
+Cita del paquete
+</p>
+<div class="org-src-container">
+<pre class="src src-R">citation(<span style="color: #79a8ff;">"biometrics"</span>)
+</pre>
+</div>
+<div id="outline-container-org7138128" class="outline-2">
+<h2 id="org7138128"><span class="section-number-2">1.</span> Enlaces de descarga</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org32fbf8e" class="outline-3">
+<h3 id="org32fbf8e"><span class="section-number-3">1.1.</span> datana</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Linux / MacOS:  <a href="https://cseljatib.github.io/labpackages/datana.tar.gz">datana.tar.gz</a></li>
+<li>Windows: <a href="https://cseljatib.github.io/labpackages/datana.zip">datana.zip</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6ffca37" class="outline-3">
+<h3 id="org6ffca37"><span class="section-number-3">1.2.</span> biometrics</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Linux / MacOS: <a href="https://cseljatib.github.io/labpackages/biometrics.tar.gz">biometrics.tar.gz</a></li>
+<li>Windows:  <a href="https://cseljatib.github.io/labpackages/biometrics.zip">biometrics.zip</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8ee9d33" class="outline-3">
+<h3 id="org8ee9d33"><span class="section-number-3">1.3.</span> Script de instalación y actualización automática</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Si Ud. prefiere, existe un script de R que descarga e instala la última versión de cada paquete, este se encuentra en el siguiente enlace: <a href="https://cseljatib.github.io/labPackages/InstallLabPackages.r">InstallLabPackages.r</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0779094" class="outline-2">
+<h2 id="org0779094"><span class="section-number-2">2.</span> Sugerencias/errores</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+En caso de encontrar errores, tenga sugerencias, o dudas, por favor escribir a <a href="mailto:christian.salas@uchile.cl">este email</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Autor: Christian Salas-Eljatib</p>
+<p class="date">Created: 2026-11-18 mié 22:01</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

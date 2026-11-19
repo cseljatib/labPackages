@@ -6,3 +6,5 @@
 !/*.tar.gz
 !/*.zip
 !/InstallLabPackages.R
+!/index.org
+!/index.html
