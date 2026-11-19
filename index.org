@@ -1,10 +1,18 @@
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/setup/html-theme-readtheorg.setup
 
-#+title: Las más recientes actualizaciones de los paquetes de R del lab
+#+title: Laboratory's R packages
 #+language: es
 #+author: Christian Salas-Eljatib
 
-En este repositorio se almacena el material computacional que complementa al libro *Estadística Aplicada e Inferencial* del Profesor [[https://eljatib.com][Christian Salas-Eljatib]] del [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]] y del [[https://www.postgradofen.uchile.cl/mag%C3%ADster-en-pol%C3%ADticas-p%C3%BAblicas-escuela-de-postgrado-facultad-de-econom%C3%ADa-y-negocios-universidad-de-chile][Magíster en Políticas Públicas]] de la [[https://uchile.cl][Universidad de Chile]].
+This repository stores the most recent versions of the computational packages from the [[https://biometriaforestal.uchile.cl][Laboratorio de Biometría y Modelación Forestal]], led by Professor [[https://eljatib.com][Christian Salas-Eljatib]] of the [[https://uchile.cl][Universidad de Chile]].
+The packages mentioned here can be run in the [[https://cran.r-project.org][R]] software.
+
+Specifically, the packages are:
+
+1. [[https://cran.r-project.org/package=datana][datana]] (Salas-Eljatib and Campos, 2026)
+2. [[https://cran.r-project.org/package=biometrics][biometrics]] (Salas-Eljatib /et al/ 2026)
+
+Although these are available on the *[[https://www.r-project.org/][CRAN]]* repository of the R software, updates there are somewhat slower than our ongoing development, so it is preferable that you always verify the versions of the installed packages.
 
 # Nico, es posible agregarle algun logo? quizas dame algunas alternativas de color o templates que podamos ir probando, pero manteniendo lo simple
 
